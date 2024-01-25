@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace AgriBid1.Models
+{
+    public partial class Customer
+    {
+        [Key]
+        public int Id { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string? FirstName { get; set; }
+        [Column(TypeName = "numeric(18, 0)")]
+        public decimal? Mobile { get; set; }
+        [StringLength(50)]
+        [Unicode(false)]
+        public string? Email { get; set; }
+    }
+}
